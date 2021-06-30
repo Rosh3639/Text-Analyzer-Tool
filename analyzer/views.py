@@ -20,7 +20,7 @@ def analyze(request):
     # If checkbox is on do this
     if removepunc == "on":
         analyzed = ""
-        punctuations = '''/[-\]{}"()+?.,=\^$|#\]/,;:!@#$%^&*'\$&'''
+        punctuations = '''/[-\]{}"()+?.,<>=\^$|#\]/,;:!@#$%^&*'\$&'''
         for char in textdj:
             if char not in punctuations:
                 analyzed = analyzed + char
@@ -68,3 +68,6 @@ def analyze(request):
 def about(request):
     return HttpResponse("This is About Page!")
 
+
+def contact(request):
+    return HttpResponse("This is Contact Page!")

@@ -10,7 +10,7 @@
 
     <title>Rcube Services</title>
   </head>
-  <body>
+  <body style="background-color: skyblue">
 
 
 
@@ -41,15 +41,14 @@
 </nav>
 
 <div class="alert alert-success alert-dismissible fade show" role="alert">
-  <strong>Success!</strong>Your Text Has Been Analyzed
+  <strong>Success! </strong>Your Text Has Been Analyzed
   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>
 
-<div class="container"> <h1>Your Analyzed Text --  {{ purpose }} </h1>
-<p>
-  <pre>{{ analyzed_text }}</pre>
-</p>
-</div>
+    <div class="container"> <h1><strong>Your Analyzed Text  </strong></h1>
+      <textarea name="text" class="form-control" id="exampleFormControlTextarea1" rows="10">
+{{ analyzed_text }}
+      </textarea>
 
 
 
