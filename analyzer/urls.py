@@ -14,13 +14,13 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
-from . import views
+from django.urls import path, include
+
+admin.site.site_header = "Rcube Admin"
+admin.site.site_title = "Rcube Admin Portal"
+admin.site.index_title = "Welcome to Rcube Portal"
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.index, name='index'),
-    path('about/', views.about, name='about'),
-    path('analyze', views.analyze, name='analyze'),
-    path('contact/', views.contact, name='contact'),
+    path('', include('textanalyzer.urls'))
 ]
